@@ -1,0 +1,46 @@
+{
+   "ActiveEmotionalView":"No Loops",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-499,-223",
+   "DisplayTieOff":"1",
+   "ExpandedHierarchyInLayout":"",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_clk_in -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_resetn_in -pg 1 -lvl 0 -x 0 -y 220 -defaultsOSRD
+preplace port port-id_clk_100mhz -pg 1 -lvl 3 -x 650 -y 40 -defaultsOSRD
+preplace port port-id_clk_50mhz -pg 1 -lvl 3 -x 650 -y 60 -defaultsOSRD
+preplace port port-id_phy_clk -pg 1 -lvl 3 -x 650 -y 80 -defaultsOSRD
+preplace port port-id_gtx_clk -pg 1 -lvl 3 -x 650 -y 100 -defaultsOSRD
+preplace portBus sys_resetn -pg 1 -lvl 3 -x 650 -y 220 -defaultsOSRD
+preplace inst system_clock -pg 1 -lvl 1 -x 210 -y 40 -swap {0 4 1 2 3} -defaultsOSRD -pinDir clk_in1 left -pinY clk_in1 20L -pinDir clk_100mhz right -pinY clk_100mhz 80R -pinDir clk_50mhz right -pinY clk_50mhz 20R -pinDir phy_clk right -pinY phy_clk 40R -pinDir gtx_clk right -pinY gtx_clk 60R
+preplace inst system_reset -pg 1 -lvl 1 -x 210 -y 200 -swap {0 1 2 3 4 6 7 8 9 5} -defaultsOSRD -pinDir slowest_sync_clk right -pinY slowest_sync_clk 20R -pinDir ext_reset_in left -pinY ext_reset_in 20L -pinDir aux_reset_in left -pinY aux_reset_in 40L -pinDir mb_debug_sys_rst left -pinY mb_debug_sys_rst 60L -pinDir dcm_locked left -pinY dcm_locked 80L -pinDir mb_reset right -pinY mb_reset 60R -pinBusDir bus_struct_reset right -pinBusY bus_struct_reset 80R -pinBusDir peripheral_reset right -pinBusY peripheral_reset 100R -pinBusDir interconnect_aresetn right -pinBusY interconnect_aresetn 120R -pinBusDir peripheral_aresetn right -pinBusY peripheral_aresetn 40R
+preplace inst reset_extender -pg 1 -lvl 2 -x 510 -y 200 -defaultsOSRD -pinDir clk left -pinY clk 20L -pinDir resetn left -pinY resetn 40L -pinDir resetn_out right -pinY resetn_out 20R
+preplace netloc clk_in1_0_1 1 0 1 NJ 60
+preplace netloc ext_reset_in_0_1 1 0 1 NJ 220
+preplace netloc reset_extender_resetn_out 1 2 1 NJ 220
+preplace netloc system_clock_clk_100mhz 1 1 2 390 40 NJ
+preplace netloc system_clock_clk_50mhz 1 1 2 NJ 60 NJ
+preplace netloc system_clock_phy_clk 1 1 2 NJ 80 NJ
+preplace netloc system_reset_peripheral_aresetn 1 1 1 N 240
+preplace netloc system_clock_gtx_clk 1 1 2 NJ 100 NJ
+levelinfo -pg 1 0 210 510 650
+pagesize -pg 1 -db -bbox -sgen -120 0 810 380
+",
+   "No Loops_ScaleFactor":"1.0",
+   "No Loops_TopLeft":"-424,-88",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_clk_in -pg 1 -lvl 0 -x 0 -y 50 -defaultsOSRD
+preplace port port-id_resetn_in -pg 1 -lvl 0 -x 0 -y 110 -defaultsOSRD
+preplace inst system_clock -pg 1 -lvl 1 -x 120 -y 50 -defaultsOSRD
+preplace inst system_reset -pg 1 -lvl 2 -x 390 -y 90 -defaultsOSRD
+preplace netloc system_clock_clk_100mhz 1 1 1 NJ 50
+preplace netloc clk_in1_0_1 1 0 1 NJ 50
+preplace netloc ext_reset_in_0_1 1 0 2 NJ 110 220J
+levelinfo -pg 1 0 120 390 570
+pagesize -pg 1 -db -bbox -sgen -120 0 570 180
+"
+}
+0

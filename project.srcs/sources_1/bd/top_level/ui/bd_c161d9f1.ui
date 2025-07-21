@@ -1,0 +1,93 @@
+{
+   "ActiveEmotionalView":"No Loops",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-393,-4",
+   "DisplayTieOff":"1",
+   "ExpandedHierarchyInLayout":"",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port m_axis_rxd -pg 1 -lvl 3 -x 620 -y 60 -defaultsOSRD
+preplace port m_axis_rxs -pg 1 -lvl 3 -x 620 -y 80 -defaultsOSRD
+preplace port mdio -pg 1 -lvl 3 -x 620 -y 140 -defaultsOSRD
+preplace port s_axi -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port s_axis_txd -pg 1 -lvl 3 -x 620 -y 120 -defaultsOSRD -right
+preplace port s_axis_txc -pg 1 -lvl 3 -x 620 -y 100 -defaultsOSRD -right
+preplace port port-id_phy_crs_dv -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+preplace port port-id_phy_rx_er -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD
+preplace port port-id_rmii_tx_en -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD -left
+preplace port port-id_clk_50 -pg 1 -lvl 0 -x 0 -y 220 -defaultsOSRD
+preplace port port-id_reset_n -pg 1 -lvl 0 -x 0 -y 300 -defaultsOSRD
+preplace port port-id_sys_clk -pg 1 -lvl 0 -x 0 -y 480 -defaultsOSRD
+preplace port port-id_gtx_clk -pg 1 -lvl 0 -x 0 -y 360 -defaultsOSRD
+preplace portBus phy_rxd -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
+preplace portBus rmii_txd -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD -left
+preplace portBus phy_rst_n -pg 1 -lvl 3 -x 620 -y 160 -defaultsOSRD
+preplace inst axi_ethernet -pg 1 -lvl 2 -x 460 -y 40 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 36 19 20 21 22 23 30 25 26 27 28 29 18 31 32 33 34 35 24 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 57 63 64 65 59 60 61 62 66 56 58} -defaultsOSRD -pinDir s_axi left -pinY s_axi 20L -pinDir s_axis_txd right -pinY s_axis_txd 80R -pinDir s_axis_txc right -pinY s_axis_txc 60R -pinDir m_axis_rxd right -pinY m_axis_rxd 20R -pinDir m_axis_rxs right -pinY m_axis_rxs 40R -pinDir mdio right -pinY mdio 100R -pinDir mii left -pinY mii 60L -pinDir mii.mii_rx_clk left -pinY mii.mii_rx_clk 80L -pinDir mii.mii_rx_dv left -pinY mii.mii_rx_dv 100L -pinDir mii.mii_rx_er left -pinY mii.mii_rx_er 120L -pinDir mii.mii_rxd left -pinY mii.mii_rxd 140L -pinDir mii.mii_tx_clk left -pinY mii.mii_tx_clk 180L -pinDir mii.mii_tx_en left -pinY mii.mii_tx_en 220L -pinDir mii.mii_tx_er left -pinY mii.mii_tx_er 240L -pinDir mii.mii_txd left -pinY mii.mii_txd 260L -pinDir s_axi_lite_resetn left -pinY s_axi_lite_resetn 340L -pinDir s_axi_lite_clk left -pinY s_axi_lite_clk 440L -pinDir mac_irq right -pinY mac_irq 140R -pinDir axis_clk left -pinY axis_clk 460L -pinDir axi_txd_arstn left -pinY axi_txd_arstn 360L -pinDir axi_txc_arstn left -pinY axi_txc_arstn 380L -pinDir axi_rxd_arstn left -pinY axi_rxd_arstn 400L -pinDir axi_rxs_arstn left -pinY axi_rxs_arstn 420L -pinDir interrupt right -pinY interrupt 160R -pinDir gtx_clk left -pinY gtx_clk 320L -pinBusDir phy_rst_n right -pinBusY phy_rst_n 120R
+preplace inst mii_to_rmii -pg 1 -lvl 1 -x 170 -y 100 -swap {7 9 8 5 0 4 6 1 2 3 10 11 12 13 14 15 16} -defaultsOSRD -pinDir mac_tx_en right -pinY mac_tx_en 160R -pinBusDir mac_txd right -pinBusY mac_txd 200R -pinDir mac_tx_er right -pinY mac_tx_er 180R -pinDir mii_tx_clk right -pinY mii_tx_clk 120R -pinDir mii_rx_clk right -pinY mii_rx_clk 20R -pinDir mii_col right -pinY mii_col 100R -pinDir mii_crs right -pinY mii_crs 140R -pinDir mii_rx_dv right -pinY mii_rx_dv 40R -pinDir mii_rx_er right -pinY mii_rx_er 60R -pinBusDir mii_rxd right -pinBusY mii_rxd 80R -pinBusDir rmii_txd left -pinBusY rmii_txd 20L -pinDir rmii_tx_en left -pinY rmii_tx_en 40L -pinBusDir phy_rxd left -pinBusY phy_rxd 60L -pinDir phy_crs_dv left -pinY phy_crs_dv 80L -pinDir phy_rx_er left -pinY phy_rx_er 100L -pinDir ref_clk left -pinY ref_clk 120L -pinDir reset_n left -pinY reset_n 200L
+preplace netloc axi_ethernet_mii_tx_en 1 1 1 N 260
+preplace netloc axi_ethernet_mii_tx_er 1 1 1 N 280
+preplace netloc axi_ethernet_mii_txd 1 1 1 N 300
+preplace netloc axi_ethernet_phy_rst_n 1 2 1 NJ 160
+preplace netloc clk50_1 1 0 1 NJ 220
+preplace netloc gtx_clk_1 1 0 2 NJ 360 NJ
+preplace netloc mii_to_rmii_mii_rx_clk 1 1 1 N 120
+preplace netloc mii_to_rmii_mii_rx_dv 1 1 1 N 140
+preplace netloc mii_to_rmii_mii_rx_er 1 1 1 N 160
+preplace netloc mii_to_rmii_mii_rxd 1 1 1 N 180
+preplace netloc mii_to_rmii_mii_tx_clk 1 1 1 N 220
+preplace netloc mii_to_rmii_rmii_tx_en 1 0 1 NJ 140
+preplace netloc mii_to_rmii_rmii_txd 1 0 1 NJ 120
+preplace netloc phy_crs_dv_0_1 1 0 1 NJ 180
+preplace netloc phy_rx_er_0_1 1 0 1 NJ 200
+preplace netloc phy_rxd_0_1 1 0 1 NJ 160
+preplace netloc reset_n_1 1 0 2 20 380 320
+preplace netloc sys_clk_1 1 0 2 NJ 480 320
+preplace netloc axi_ethernet_m_axis_rxd 1 2 1 N 60
+preplace netloc axi_ethernet_m_axis_rxs 1 2 1 N 80
+preplace netloc axi_ethernet_mdio 1 2 1 NJ 140
+preplace netloc s_axi_1 1 0 2 NJ 60 NJ
+preplace netloc s_axis_txd_1 1 2 1 N 120
+preplace netloc s_axis_txc_1 1 2 1 N 100
+levelinfo -pg 1 0 170 460 620
+pagesize -pg 1 -db -bbox -sgen -150 0 780 560
+",
+   "No Loops_ScaleFactor":"1.0",
+   "No Loops_TopLeft":"-211,2",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port S_AXI -pg 1 -lvl 0 -x 0 -y 350 -defaultsOSRD
+preplace port MDIO -pg 1 -lvl 3 -x 710 -y 470 -defaultsOSRD
+preplace port port-id_ref_clk -pg 1 -lvl 0 -x 0 -y 370 -defaultsOSRD
+preplace port port-id_s_axi_aresetn -pg 1 -lvl 0 -x 0 -y 390 -defaultsOSRD
+preplace port port-id_rmii_tx_en -pg 1 -lvl 3 -x 710 -y 230 -defaultsOSRD
+preplace port port-id_phy_crs_dv -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
+preplace port port-id_phy_rx_er -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+preplace portBus rmii_txd_0 -pg 1 -lvl 3 -x 710 -y 210 -defaultsOSRD
+preplace portBus phy_rxd -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace inst axi_ethernetlite -pg 1 -lvl 1 -x 170 -y 370 -defaultsOSRD
+preplace inst mii_to_rmii -pg 1 -lvl 2 -x 500 -y 150 -defaultsOSRD
+preplace netloc mii_to_rmii_0_mii_tx_clk 1 1 2 NJ 410 690
+preplace netloc mii_to_rmii_0_mii_rx_clk 1 1 2 NJ 330 680
+preplace netloc mii_to_rmii_0_mii_crs 1 1 2 NJ 290 640
+preplace netloc mii_to_rmii_0_mii_rx_dv 1 1 2 NJ 350 670
+preplace netloc mii_to_rmii_0_mii_rxd 1 1 2 NJ 390 650
+preplace netloc mii_to_rmii_0_mii_col 1 1 2 320J 10 640
+preplace netloc mii_to_rmii_0_mii_rx_er 1 1 2 NJ 370 660
+preplace netloc axi_ethernetlite_0_phy_rst_n 1 1 1 350 220n
+preplace netloc axi_ethernetlite_0_phy_tx_en 1 1 1 330 80n
+preplace netloc axi_ethernetlite_0_phy_tx_data 1 1 1 340 100n
+preplace netloc source_100mhz_sys_clk 1 0 2 20 550 360
+preplace netloc source_100mhz_sys_resetn 1 0 1 NJ 390
+preplace netloc mii_to_rmii_0_rmii_txd 1 2 1 NJ 210
+preplace netloc mii_to_rmii_0_rmii_tx_en 1 2 1 NJ 230
+preplace netloc phy_rxd_0_1 1 0 2 NJ 140 NJ
+preplace netloc phy_crs_dv_0_1 1 0 2 NJ 160 NJ
+preplace netloc phy_rx_er_0_1 1 0 2 NJ 180 NJ
+preplace netloc system_interconnect_M02_AXI 1 0 1 NJ 350
+preplace netloc axi_ethernetlite_MDIO 1 1 2 NJ 470 NJ
+levelinfo -pg 1 0 170 500 710
+pagesize -pg 1 -db -bbox -sgen -150 0 870 560
+"
+}
+0
