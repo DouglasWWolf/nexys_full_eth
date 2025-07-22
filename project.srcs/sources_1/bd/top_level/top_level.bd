@@ -973,11 +973,29 @@
             "value": "3"
           },
           "NUM_SI": {
-            "value": "1"
+            "value": "2"
           }
         },
         "interface_ports": {
           "S00_AXI": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "1"
+              }
+            },
+            "bridges": [
+              "M00_AXI",
+              "M01_AXI",
+              "M02_AXI"
+            ]
+          },
+          "S01_AXI": {
             "mode": "Slave",
             "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
@@ -2401,6 +2419,219 @@
                 "direction": "I"
               }
             }
+          },
+          "M_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "DATA_WIDTH": {
+                "value": "32",
+                "value_src": "auto"
+              },
+              "PROTOCOL": {
+                "value": "AXI4LITE",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "ID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "ADDR_WIDTH": {
+                "value": "32",
+                "value_src": "auto"
+              },
+              "AWUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "ARUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "WUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "RUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "BUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "READ_WRITE_MODE": {
+                "value": "READ_WRITE",
+                "value_src": "constant"
+              },
+              "HAS_BURST": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_LOCK": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_PROT": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "HAS_CACHE": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_QOS": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_REGION": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_WSTRB": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "HAS_BRESP": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "HAS_RRESP": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "SUPPORTS_NARROW_BURST": {
+                "value": "0",
+                "value_src": "auto"
+              },
+              "NUM_READ_OUTSTANDING": {
+                "value": "1",
+                "value_src": "auto"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "1",
+                "value_src": "auto"
+              },
+              "MAX_BURST_LENGTH": {
+                "value": "1",
+                "value_src": "auto"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/source_100mhz/system_clock_clk_out1",
+                "value_src": "ip_prop"
+              }
+            },
+            "address_space_ref": "M_AXI",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFF",
+              "width": "32"
+            },
+            "port_maps": {
+              "AWADDR": {
+                "physical_name": "M_AXI_AWADDR",
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "AWPROT": {
+                "physical_name": "M_AXI_AWPROT",
+                "direction": "O",
+                "left": "2",
+                "right": "0"
+              },
+              "AWVALID": {
+                "physical_name": "M_AXI_AWVALID",
+                "direction": "O"
+              },
+              "AWREADY": {
+                "physical_name": "M_AXI_AWREADY",
+                "direction": "I"
+              },
+              "WDATA": {
+                "physical_name": "M_AXI_WDATA",
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "WSTRB": {
+                "physical_name": "M_AXI_WSTRB",
+                "direction": "O",
+                "left": "3",
+                "right": "0"
+              },
+              "WVALID": {
+                "physical_name": "M_AXI_WVALID",
+                "direction": "O"
+              },
+              "WREADY": {
+                "physical_name": "M_AXI_WREADY",
+                "direction": "I"
+              },
+              "BRESP": {
+                "physical_name": "M_AXI_BRESP",
+                "direction": "I",
+                "left": "1",
+                "right": "0"
+              },
+              "BVALID": {
+                "physical_name": "M_AXI_BVALID",
+                "direction": "I"
+              },
+              "BREADY": {
+                "physical_name": "M_AXI_BREADY",
+                "direction": "O"
+              },
+              "ARADDR": {
+                "physical_name": "M_AXI_ARADDR",
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "ARPROT": {
+                "physical_name": "M_AXI_ARPROT",
+                "direction": "O",
+                "left": "2",
+                "right": "0"
+              },
+              "ARVALID": {
+                "physical_name": "M_AXI_ARVALID",
+                "direction": "O"
+              },
+              "ARREADY": {
+                "physical_name": "M_AXI_ARREADY",
+                "direction": "I"
+              },
+              "RDATA": {
+                "physical_name": "M_AXI_RDATA",
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "RRESP": {
+                "physical_name": "M_AXI_RRESP",
+                "direction": "I",
+                "left": "1",
+                "right": "0"
+              },
+              "RVALID": {
+                "physical_name": "M_AXI_RVALID",
+                "direction": "I"
+              },
+              "RREADY": {
+                "physical_name": "M_AXI_RREADY",
+                "direction": "O"
+              }
+            }
           }
         },
         "ports": {
@@ -2409,7 +2640,7 @@
             "direction": "I",
             "parameters": {
               "ASSOCIATED_BUSIF": {
-                "value": "rxd:rxs:txc:txd",
+                "value": "rxd:rxs:txc:txd:M_AXI",
                 "value_src": "constant"
               },
               "ASSOCIATED_RESET": {
@@ -2445,6 +2676,15 @@
             "left": "31",
             "right": "0"
           },
+          "dbg_is_icmp_ping": {
+            "direction": "O"
+          },
+          "dbg_is_arp_request": {
+            "direction": "O"
+          },
+          "dbg_is_udp_rw": {
+            "direction": "O"
+          },
           "dbg_rx_eth_dst": {
             "direction": "O",
             "left": "47",
@@ -2460,108 +2700,28 @@
             "left": "15",
             "right": "0"
           },
-          "dbg_arp_req_hw": {
+          "dbg_inc_udp_src_port": {
             "direction": "O",
             "left": "15",
             "right": "0"
           },
-          "dbg_arp_req_prot": {
+          "dbg_inc_udp_dst_port": {
             "direction": "O",
             "left": "15",
             "right": "0"
           },
-          "dbg_arp_req_hw_len": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
-          },
-          "dbg_arp_req_prot_len": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
-          },
-          "dbg_arp_req_opcode": {
+          "dbg_inc_udp_length": {
             "direction": "O",
             "left": "15",
             "right": "0"
-          },
-          "dbg_arp_req_sender_mac": {
-            "direction": "O",
-            "left": "47",
-            "right": "0"
-          },
-          "dbg_arp_req_sender_ip": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "dbg_arp_req_target_mac": {
-            "direction": "O",
-            "left": "47",
-            "right": "0"
-          },
-          "dbg_arp_req_target_ip": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "dbg_inc_ip4_ver_dsf": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "dbg_inc_ip4_length": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "dbg_inc_ip4_id": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "dbg_inc_ip4_flags": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "dbg_inc_ip4_ttl_prot": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "dbg_inc_ip4_checksum": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "dbg_inc_ip4_src_ip": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "dbg_inc_ip4_dst_ip": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "dbg_ping_req_type": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "dbg_ping_req_id": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "dbg_ping_req_seq": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "dbg_is_icmp_ping": {
-            "direction": "O"
+          }
+        },
+        "addressing": {
+          "address_spaces": {
+            "M_AXI": {
+              "range": "4G",
+              "width": "32"
+            }
           }
         }
       }
@@ -2591,6 +2751,12 @@
         "interface_ports": [
           "MDIO",
           "ethernet/mdio"
+        ]
+      },
+      "ethernet_reg_M_AXI": {
+        "interface_ports": [
+          "ethernet_reg/M_AXI",
+          "system_interconnect/S01_AXI"
         ]
       },
       "s_axis_txc_1": {
@@ -2663,52 +2829,22 @@
           "ETH_RSTN"
         ]
       },
-      "ethernet_reg_dbg_inc_ip4_checksum": {
+      "ethernet_reg_dbg_inc_udp_dst_port": {
         "ports": [
-          "ethernet_reg/dbg_inc_ip4_checksum",
-          "system_ila/probe10"
-        ]
-      },
-      "ethernet_reg_dbg_inc_ip4_dst_ip": {
-        "ports": [
-          "ethernet_reg/dbg_inc_ip4_dst_ip",
-          "system_ila/probe15"
-        ]
-      },
-      "ethernet_reg_dbg_inc_ip4_flags": {
-        "ports": [
-          "ethernet_reg/dbg_inc_ip4_flags",
-          "system_ila/probe8"
-        ]
-      },
-      "ethernet_reg_dbg_inc_ip4_id": {
-        "ports": [
-          "ethernet_reg/dbg_inc_ip4_id",
+          "ethernet_reg/dbg_inc_udp_dst_port",
           "system_ila/probe7"
         ]
       },
-      "ethernet_reg_dbg_inc_ip4_length": {
+      "ethernet_reg_dbg_inc_udp_length": {
         "ports": [
-          "ethernet_reg/dbg_inc_ip4_length",
+          "ethernet_reg/dbg_inc_udp_length",
+          "system_ila/probe8"
+        ]
+      },
+      "ethernet_reg_dbg_inc_udp_src_port": {
+        "ports": [
+          "ethernet_reg/dbg_inc_udp_src_port",
           "system_ila/probe6"
-        ]
-      },
-      "ethernet_reg_dbg_inc_ip4_src_ip": {
-        "ports": [
-          "ethernet_reg/dbg_inc_ip4_src_ip",
-          "system_ila/probe14"
-        ]
-      },
-      "ethernet_reg_dbg_inc_ip4_ttl_prot": {
-        "ports": [
-          "ethernet_reg/dbg_inc_ip4_ttl_prot",
-          "system_ila/probe9"
-        ]
-      },
-      "ethernet_reg_dbg_inc_ip4_ver_dsf": {
-        "ports": [
-          "ethernet_reg/dbg_inc_ip4_ver_dsf",
-          "system_ila/probe5"
         ]
       },
       "ethernet_reg_dbg_is_icmp_ping": {
@@ -2717,22 +2853,10 @@
           "system_ila/probe4"
         ]
       },
-      "ethernet_reg_dbg_ping_req_id": {
+      "ethernet_reg_dbg_is_udp_rw": {
         "ports": [
-          "ethernet_reg/dbg_ping_req_id",
-          "system_ila/probe12"
-        ]
-      },
-      "ethernet_reg_dbg_ping_req_seq": {
-        "ports": [
-          "ethernet_reg/dbg_ping_req_seq",
-          "system_ila/probe13"
-        ]
-      },
-      "ethernet_reg_dbg_ping_req_type": {
-        "ports": [
-          "ethernet_reg/dbg_ping_req_type",
-          "system_ila/probe11"
+          "ethernet_reg/dbg_is_udp_rw",
+          "system_ila/probe5"
         ]
       },
       "ethernet_reg_dbg_rx_eth_dst": {
@@ -2848,6 +2972,29 @@
                 "address_block": "/uart_axi_bridge/axi_uartlite/S_AXI/Reg",
                 "offset": "0x40600000",
                 "range": "64K"
+              }
+            }
+          }
+        }
+      },
+      "/ethernet_reg": {
+        "address_spaces": {
+          "M_AXI": {
+            "segments": {
+              "SEG_axi_ethernet_Reg0": {
+                "address_block": "/ethernet/axi_ethernet/s_axi/Reg0",
+                "offset": "0x00004000",
+                "range": "4K"
+              },
+              "SEG_axi_revision_reg0": {
+                "address_block": "/axi_revision/S_AXI/reg0",
+                "offset": "0x00000000",
+                "range": "256"
+              },
+              "SEG_example_slave_reg0": {
+                "address_block": "/example_slave/S_AXI/reg0",
+                "offset": "0x00001000",
+                "range": "256"
               }
             }
           }

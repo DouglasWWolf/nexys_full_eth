@@ -190,6 +190,24 @@
             },
             "V3": {
                 "VT": "AC",
+                "BA": "0x00000000",
+                "HA": "0x000000FF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "M_AXI",
+                "MX": "/ethernet_reg",
+                "MI": "M_AXI",
+                "MS": "SEG_axi_revision_reg0",
+                "MV": "xilinx.com:module_ref:ethernet_reg:1.0",
+                "SX": "/axi_revision",
+                "SI": "S_AXI",
+                "SS": "reg0",
+                "SV": "xilinx.com:module_ref:axi_revision:1.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V4": {
+                "VT": "AC",
                 "BA": "0x0000000000000000",
                 "HA": "0x00000000000000FF",
                 "BP": "C_BASEADDR",
@@ -206,7 +224,25 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V4": {
+            "V5": {
+                "VT": "AC",
+                "BA": "0x00001000",
+                "HA": "0x000010FF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "M_AXI",
+                "MX": "/ethernet_reg",
+                "MI": "M_AXI",
+                "MS": "SEG_example_slave_reg0",
+                "MV": "xilinx.com:module_ref:ethernet_reg:1.0",
+                "SX": "/example_slave",
+                "SI": "S_AXI",
+                "SS": "reg0",
+                "SV": "xilinx.com:module_ref:axil_slave:1.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V6": {
                 "VT": "AC",
                 "BA": "0x0000000000001000",
                 "HA": "0x00000000000010FF",
@@ -224,7 +260,25 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V5": {
+            "V7": {
+                "VT": "AC",
+                "BA": "0x00004000",
+                "HA": "0x00004FFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "M_AXI",
+                "MX": "/ethernet_reg",
+                "MI": "M_AXI",
+                "MS": "SEG_axi_ethernet_Reg0",
+                "MV": "xilinx.com:module_ref:ethernet_reg:1.0",
+                "SX": "/ethernet/axi_ethernet",
+                "SI": "s_axi",
+                "SS": "Reg0",
+                "SV": "xilinx.com:ip:axi_ethernet:7.2",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V8": {
                 "VT": "AC",
                 "BA": "0x0000000000004000",
                 "HA": "0x0000000000004FFF",
@@ -242,7 +296,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V6": {
+            "V9": {
                 "VT": "AC",
                 "BA": "0x40600000",
                 "HA": "0x4060FFFF",
@@ -287,6 +341,21 @@
             },
             {
                 "src": "V6",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V7",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V8",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V9",
                 "trg": "V2",
                 "EH": "2"
             }
