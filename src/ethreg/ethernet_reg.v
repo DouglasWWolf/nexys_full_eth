@@ -19,9 +19,11 @@
 //       fields and 64-bit fields.  64-bit-data writes are handled as two consecutive 32-bit data
 //       writes
 //
-//    Both register read requests and register write requests generate a response message
+//    Register read requests and register write requests both generate a response message
 //
 //    Register read/write messages are standard IPv4 UDP packets 
+//
+//    Local IP address can be changed on the fly at runtime
 //
 //================================================================================================
 
@@ -43,7 +45,13 @@
 // Define this to add some miscellaneous debug ports
 `define DEBUG_MISC
 
-module ethernet_reg # (parameter AW=32, DW=32)
+module ethernet_reg #
+(
+    parameter AW = 32,
+    parameter DW = 32,
+    parameter[31:0] DEFAULT_LOCAL_IP  = 32'h0C_0C_0C_07,
+    parameter[47:0] DEFAULT_LOCAL_MAC = 48'h01_02_03_04_05_06
+)
 (
     input   clk, resetn,
 
@@ -251,8 +259,8 @@ localparam TX_UDP  = 3;
 reg[31:0] rxs_status_word;
 
 // The MAC address and IP address of this device
-reg[31:0]  local_ip  = 32'h0C_0C_0C_07;
-reg[47:0]  local_mac = 48'hC1_C2_C3_C4_C5_C6;
+reg[31:0]  local_ip  = DEFAULT_LOCAL_IP;
+reg[47:0]  local_mac = DEFAULT_LOCAL_MAC;
 localparam bcast_mac = 48'hFF_FF_FF_FF_FF_FF;
 
 // The packet data of the most recently received packet

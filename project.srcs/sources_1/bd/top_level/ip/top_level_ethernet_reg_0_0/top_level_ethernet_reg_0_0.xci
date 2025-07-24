@@ -10,11 +10,15 @@
       "component_parameters": {
         "AW": [ { "value": "32", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "DW": [ { "value": "32", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "DEFAULT_LOCAL_IP": [ { "value": "0x0C0C0C07", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "DEFAULT_LOCAL_MAC": [ { "value": "0x010203040506", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
         "Component_Name": [ { "value": "top_level_ethernet_reg_0_0", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
         "AW": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "DW": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ]
+        "DW": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "DEFAULT_LOCAL_IP": [ { "value": "0x0C0C0C07", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "DEFAULT_LOCAL_MAC": [ { "value": "0x010203040506", "resolve_type": "generated", "format": "bitString", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "artix7" } ],

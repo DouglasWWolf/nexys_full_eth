@@ -411,7 +411,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c9a3af84</spirit:value>
+            <spirit:value>62d6a6a2</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -424,7 +424,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c9a3af84</spirit:value>
+            <spirit:value>62d6a6a2</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1217,6 +1217,16 @@
         <spirit:displayName>Dw</spirit:displayName>
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DW">32</spirit:value>
       </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>DEFAULT_LOCAL_IP</spirit:name>
+        <spirit:displayName>Default Local Ip</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DEFAULT_LOCAL_IP" spirit:bitStringLength="32">0x0C0C0C07</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="std_logic_vector">
+        <spirit:name>DEFAULT_LOCAL_MAC</spirit:name>
+        <spirit:displayName>Default Local Mac</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DEFAULT_LOCAL_MAC" spirit:bitStringLength="48">0x010203040506</spirit:value>
+      </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
   <spirit:choices>
@@ -1232,7 +1242,7 @@
       <spirit:file>
         <spirit:name>xgui/ethernet_reg_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_8b2e7f5a</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_85c20fce</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1248,6 +1258,16 @@
       <spirit:name>DW</spirit:name>
       <spirit:displayName>Dw</spirit:displayName>
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.DW">32</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>DEFAULT_LOCAL_IP</spirit:name>
+      <spirit:displayName>Default Local Ip</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.DEFAULT_LOCAL_IP" spirit:bitStringLength="32">0x0C0C0C07</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>DEFAULT_LOCAL_MAC</spirit:name>
+      <spirit:displayName>Default Local Mac</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.DEFAULT_LOCAL_MAC" spirit:bitStringLength="48">0x010203040506</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
@@ -1269,7 +1289,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-07-22T07:42:09Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2025-07-24T19:37:49Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2024.2</xilinx:xilinxVersion>

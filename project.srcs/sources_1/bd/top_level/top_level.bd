@@ -2925,10 +2925,10 @@
           "uart_axi_bridge/s_axi_aclk",
           "system_interconnect/aclk",
           "axi_revision/AXI_ACLK",
-          "example_slave/clk",
           "ethernet/sys_clk",
           "system_ila/clk",
-          "ethernet_reg/clk"
+          "ethernet_reg/clk",
+          "example_slave/clk"
         ]
       },
       "source_100mhz_sys_resetn": {
@@ -2937,10 +2937,10 @@
           "uart_axi_bridge/s_axi_aresetn",
           "system_interconnect/aresetn",
           "axi_revision/AXI_ARESETN",
-          "example_slave/resetn",
           "ethernet/reset_n",
           "system_ila/resetn",
-          "ethernet_reg/resetn"
+          "ethernet_reg/resetn",
+          "example_slave/resetn"
         ]
       }
     },
